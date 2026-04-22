@@ -1,0 +1,100 @@
+/* Custom styles for Attendance Tracker */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 2px solid #e9ecef;
+    font-weight: 600;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.badge {
+    padding: 0.5em 0.8em;
+    font-size: 0.85rem;
+}
+
+.progress {
+    border-radius: 10px;
+}
+
+.btn-lg {
+    margin: 0.25rem;
+}
+
+/* Status indicators */
+.status-present {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.status-absent {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* List group checkboxes */
+.list-group-item {
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Dashboard stats */
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Alert customization */
+.alert {
+    border-radius: 0.5rem;
+}
+
+/* Form styling */
+.form-control:focus,
+.form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Button group for status selection */
+.btn-group .btn-outline-success.active,
+.btn-group .btn-outline-success:active {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-group .btn-outline-danger.active,
+.btn-group .btn-outline-danger:active {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+}

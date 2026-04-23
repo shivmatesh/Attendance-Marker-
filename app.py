@@ -357,9 +357,16 @@ def delete_user(user_id):
     return redirect(url_for('manage_users'))
 
 
-# Initialize database
-with app.app_context():
+db_initialized = False
+
+@app.before_request
+def init_db_once():
+    global db_initialized
+    if db_initialized:
+        return
+
     db.create_all()
+
     # Create default admin if no users exist
     if not User.query.first():
         admin = User(username='admin', role='admin')
@@ -368,6 +375,7 @@ with app.app_context():
         db.session.commit()
         print('Default admin user created (username: admin, password: admin123)')
 
+    db_initialized = True
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
